@@ -1,9 +1,11 @@
+# import libraries
 import streamlit as st
 from llama_index import VectorStoreIndex, ServiceContext, Document
 from llama_index.llms import OpenAI
 import openai
 from llama_index import SimpleDirectoryReader
 
+# initalize message history
 st.set_page_config(page_title="Chat with the Streamlit docs, powered by LlamaIndex", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
 openai.api_key = st.secrets.openai_key
 st.title("Chat with the Streamlit docs, powered by LlamaIndex 💬🦙")
@@ -14,6 +16,10 @@ if "messages" not in st.session_state.keys(): # Initialize the chat messages his
         {"role": "assistant", "content": "Ask me a question about Streamlit's open-source Python library!"}
     ]
 
+# load and index data
+# Download the markdown files for Streamlit's documentation
+# consider using LlamaIndex’s library of data connectors, available via LlamaHub
+# Add the data folder to the root level of your app.
 @st.cache_resource(show_spinner=False)
 def load_data():
     with st.spinner(text="Loading and indexing the Streamlit docs – hang tight! This should take 1-2 minutes."):
