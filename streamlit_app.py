@@ -1,4 +1,16 @@
 import streamlit as st
+import asyncio
+
+try:
+    # Try to get the existing event loop
+    loop = asyncio.get_event_loop()
+    if not loop.is_running():
+        # If the loop is not running, set a new event loop
+        asyncio.set_event_loop(asyncio.new_event_loop())
+except RuntimeError as e:
+    # If no loop is found, set a new event loop
+    asyncio.set_event_loop(asyncio.new_event_loop())
+    
 from llama_index import VectorStoreIndex, ServiceContext, Document
 from llama_index.llms import OpenAI
 import openai
