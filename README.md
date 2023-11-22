@@ -1,6 +1,6 @@
 # 🦙📚 LlamaIndex - Chat with the Streamlit docs
 
-Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the content of the Streamlit docs (or your own data).
+Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the contents of the Streamlit docs (or your own data).
 
 ## Overview of the App
 
@@ -11,15 +11,7 @@ Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the content of 
 
 ## Demo App
 
->>> RHM: 2023-08-30 IMPORTANT !!
-See:[Build a chatbot with custom data sources, powered by LlamaIndex](https://blog.streamlit.io/build-a-chatbot-with-custom-data-sources-powered-by-llamaindex/)
-
-- need to add a Streamlit secrets files (secrets.toml)
-- should put in place a .gitignore file
-
-<<< RHM
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://lllamaindex-chat-with-docs.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llamaindex-chat-with-docs.streamlit.app/)
 
 ## Get an OpenAI API key
 
